@@ -1,0 +1,25 @@
+# Example variable values for the AppSync API
+
+# api_name = "stytch-appsync"
+
+# OIDC configuration
+# oidc_issuer_url = "https://gaudy-barracuda-8765.customers.stytch.dev"
+# oidc_client_id  = "your-client-id-here"  # Optional
+# oidc_auth_ttl   = 0  # Auth TTL in seconds (0 = default)
+# oidc_iat_ttl    = 0  # IAT TTL in seconds (0 = default)
+
+# environment = "sandbox"
+
+# Additional tags
+# tags = {
+#   Owner = "your-team"
+#   CostCenter = "your-cost-center"
+# }
+
+# Required: Stytch Project ID (sensitive)
+# This should be provided via environment variable: TF_VAR_stytch_project_id
+# or via terraform apply -var="stytch_project_id=your-project-id"
+# stytch_project_id = "project-test-xxxxx"
+
+# Optional: Enable automatic secret rotation
+# enable_secret_rotation = false

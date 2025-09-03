@@ -1,0 +1,70 @@
+type Query {
+  """
+  A simple endpoint that returns success when authenticated
+  """
+  checkAuth: AuthResponse!
+}
+
+"""
+Response type for authentication check
+"""
+type AuthResponse {
+  """
+  Status of the authentication
+  """
+  status: String!
+  
+  """
+  Message providing additional context
+  """
+  message: String!
+  
+  """
+  Timestamp of the request
+  """
+  timestamp: String!
+  
+  """
+  User information from the OIDC token
+  """
+  user: User
+}
+
+"""
+User information extracted from Lambda authorizer
+"""
+type User {
+  """
+  Subject identifier from the token
+  """
+  sub: String
+  
+  """
+  Email address if available
+  """
+  email: String
+  
+  """
+  Organization ID from Stytch
+  """
+  organizationId: String
+  
+  """
+  Session ID from Stytch
+  """
+  sessionId: String
+  
+  """
+  User roles from Stytch
+  """
+  roles: [String]
+  
+  """
+  Full context from Lambda authorizer
+  """
+  context: String
+}
+
+schema {
+  query: Query
+}
