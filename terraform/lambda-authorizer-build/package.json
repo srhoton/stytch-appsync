@@ -1,0 +1,9 @@
+{
+  "name": "appsync-lambda-authorizer",
+  "version": "1.0.0",
+  "description": "Lambda authorizer for AppSync with Stytch B2B JWT verification",
+  "main": "index.js",
+  "dependencies": {
+    "jose": "^5.2.0"
+  }
+}

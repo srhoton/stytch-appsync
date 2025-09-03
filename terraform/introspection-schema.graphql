@@ -1,0 +1,20 @@
+schema {
+  query: Query
+}
+
+type AuthResponse {
+  message: String!
+  status: String!
+  timestamp: String!
+  user: User
+}
+
+type Query {
+  checkAuth: AuthResponse!
+}
+
+type User {
+  claims: String
+  email: String
+  sub: String
+}
